@@ -1,0 +1,73 @@
+--main.cc--
+#include <iostream>
+#include "g.h"
+#include "f.h"
+
+int main(){
+
+}
+
+--f.cc--
+#include "f.h"
+#include <iostream>
+namespace edu{ namespace vcccd{ namespace vc{ namespace csv13{ namespace A{
+
+    //int f(){
+  //  }
+
+
+
+
+}}}}}// end of namespace
+
+--g.cc--
+#include "g.h"
+#include <iostream>
+
+namespace edu{ namespace vcccd{ namespace vc{ namespace csv13{ namespace A{
+
+
+
+}}}}}// end of namespace
+
+--g.h--
+//
+// Created by vscilab on 11/29/2018.
+//
+#include <iostream>
+#ifndef EX05_SEPARATECOMPILATION_G_H
+#define EX05_SEPARATECOMPILATION_G_H
+namespace edu{
+    namespace vcccd{
+        namespace vc{
+            namespace csv13{
+                namespace A{
+                        std::string g(__FILE__);
+                    }
+                }
+            }
+        }
+    }
+
+#endif //EX05_SEPARATECOMPILATION_G_H
+
+--f.h--
+//
+// Created by vscilab on 11/29/2018.
+//
+#include <iostream>
+#ifndef EX05_SEPARATECOMPILATION_F_H
+#define EX05_SEPARATECOMPILATION_F_H
+namespace edu{
+    namespace vcccd{
+        namespace vc{
+            namespace csv13{
+                namespace A{
+                    std::string f();
+
+                }
+            }
+        }
+    }
+}
+#endif //EX05_SEPARATECOMPILATION_F_H
